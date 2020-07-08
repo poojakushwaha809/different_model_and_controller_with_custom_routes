@@ -1,0 +1,12 @@
+Rails.application.routes.draw do
+	get 'articles/new', :to => 'my_articles#my_new'
+	post 'articles12233444', :to => 'my_articles#my_create', as: :hello
+	get 'article/:asheesh', :to => 'my_articles#my_show', as: :bye
+	get 'articles', :to => 'my_articles#my_index', as: :articles
+	get 'articles/:ankur/edit', :to => 'my_articles#my_edit', as: :edit
+	put 'articles/:id', :to => 'my_articles#my_update', as: :update
+
+
+
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+end

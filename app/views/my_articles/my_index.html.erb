@@ -1,0 +1,20 @@
+
+<h1>Listing Articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+
+  <% @articles.each do |shruti| %>
+    <tr>
+      <td><%= shruti.title %></td>
+      <td><%= shruti.text %></td>
+      <td><%= link_to 'Show', bye_path(shruti) %></td>
+      <td><%= link_to 'Edit', edit_path(shruti) %></td>
+
+    </tr>
+  <% end %>
+</table>
