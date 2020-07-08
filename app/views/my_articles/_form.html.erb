@@ -1,0 +1,19 @@
+<h1>heloo pooja!!!!</h1>
+ 
+
+<%= form_for  @article, url: @article.new_record? ? hello_path : update_path(@article), local: true, method: @article.new_record? ? :post : :put do |form| %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit%>
+  </p>
+<% end %>

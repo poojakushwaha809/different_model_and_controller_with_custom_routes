@@ -6,6 +6,7 @@ class MyArticlesController < ApplicationController
 	end
 
 	def my_new
+		@article = Article.new
 	end
 
 
@@ -14,7 +15,7 @@ class MyArticlesController < ApplicationController
 
 	  # render plain: params[:article].inspect
 	    # @article = Article.new(pooja_params)
-	    @article = Article.new(title: params[:pooja][:title] , text: params[:pooja][:text])
+	    @article = Article.new(title: params[:article][:title] , text: params[:article][:text])
 		@article.save
 		redirect_to bye_url(@article)  
 
