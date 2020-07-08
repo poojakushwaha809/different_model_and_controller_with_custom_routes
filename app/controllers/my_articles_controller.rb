@@ -38,4 +38,12 @@ class MyArticlesController < ApplicationController
 	end
 
 
+	def my_destroy
+	  @monu = Article.find(params[:asheesh])
+	  @monu.destroy
+	 
+	  redirect_to articles_path
+	end
+
+
 end

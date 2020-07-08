@@ -14,7 +14,9 @@
       <td><%= shruti.text %></td>
       <td><%= link_to 'Show', bye_path(shruti) %></td>
       <td><%= link_to 'Edit', edit_path(shruti) %></td>
-
+      <td><%= link_to 'Destroy', delete_path(shruti),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>

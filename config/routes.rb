@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 	get 'articles', :to => 'my_articles#my_index', as: :articles
 	get 'articles/:ankur/edit', :to => 'my_articles#my_edit', as: :edit
 	put 'articles/:id', :to => 'my_articles#my_update', as: :update
+	delete 'articles/:asheesh', :to => 'my_articles#my_destroy', as: :delete
 
 
 
