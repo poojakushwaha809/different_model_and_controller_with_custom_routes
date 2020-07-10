@@ -1,5 +1,5 @@
-
-<%= form_for :comment, url: hii_path(@art) do |f| %>
+<%byebug%>
+<%= form_for :comment, url: @comment.present? ? comment_update_path : hii_path(@art), method: @comment.present? ? :put : :post do |f| %>
   <p>
     <%= f.label :commenter %><br>
     <%= f.text_field :commenter %>

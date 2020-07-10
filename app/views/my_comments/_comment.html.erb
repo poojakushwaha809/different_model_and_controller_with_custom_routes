@@ -7,6 +7,9 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
+
+<%= link_to 'Edit', comment_edit_path(@art, comment) %>
+
 <p>
   <%= link_to 'Destroy Comment', ruin_path(@art, comment),
                method: :delete,
